@@ -22,6 +22,7 @@ jobs:
     env:
       SONATYPE_USERNAME: ${{ secrets.sonatype_username }}
       SONATYPE_PASSWORD: ${{ secrets.sonatype_password }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/setup-java@v4
         with:
