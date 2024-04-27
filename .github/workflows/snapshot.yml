@@ -16,6 +16,9 @@ on:
 jobs:
   build-upload:
     runs-on: macOS-latest
+    permissions:
+      contents: read
+      packages: write
     env:
       SONATYPE_USERNAME: ${{ secrets.sonatype_username }}
       SONATYPE_PASSWORD: ${{ secrets.sonatype_password }}
