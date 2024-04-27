@@ -20,6 +20,10 @@ jobs:
       SONATYPE_USERNAME: ${{ secrets.sonatype_username }}
       SONATYPE_PASSWORD: ${{ secrets.sonatype_password }}
     steps:
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
       - uses: actions/checkout@v4
       - name: Check
         run: ./gradlew --stacktrace check
