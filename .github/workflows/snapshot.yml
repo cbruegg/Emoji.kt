@@ -20,6 +20,7 @@ jobs:
       SONATYPE_USERNAME: ${{ secrets.sonatype_username }}
       SONATYPE_PASSWORD: ${{ secrets.sonatype_password }}
     steps:
+      - uses: actions/checkout@v4
       - name: Check
         run: ./gradlew --stacktrace check
         shell: bash

@@ -13,8 +13,7 @@ jobs:
   check:
     runs-on: macOS-latest
     steps:
-      - name: Setup
-        uses: kosi-libs/kodein-internal-github-actions/setup@main
+      - uses: actions/checkout@v4
       - name: Check
         run: ./gradlew --stacktrace check
         shell: bash
